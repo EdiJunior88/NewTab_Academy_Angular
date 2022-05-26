@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes e serviços</title>
+</head>
+
+<body>
+  <h1>Componentes e serviços</h1>
+
+  <h2>Componentes</h2>
+
+  <p>Uma aplicação Angular é baseada em componentes. Com eles, nós podemos encapsular comportamentos e regras da interface, o que torna a criação de aplicações algo mais simples. Inclusive, um componente pode encapsular outros componentes. Isso é um ponto muito positivo, porque o componente pode ser reaproveitado em vários lugares da aplicação.</p>
+
+  <p>Um componente é composto de 3 itens:</p>
+
+  <ol>
+    <li>Template HTML;</li>
+    <li>CSS;</li>
+    <li>Uma classe que gerencia as propriedades e comportamentos.</li>
+  </ol>
+  
+  <p>Poderíamos, por exemplo, criar uma barra de ferramentas (com botões “Salvar”, “Limpar”, “Excluir”, etc) e reutilizar ela em várias telas de cadastro.</p>
+
+  <p>Seria possível também criar um componente de listagem de dados, com paginação para exibir resultados de uma pesquisa qualquer, e reaproveitá-lo em todas as telas de pesquisa de um sistema.</p>
+
+  <p>Quem sabe, criar também uma entrada de texto que já venha com a possibilidade de incluir uma máscara (de telefone ou CPF, por exemplo).</p>
+
+  <p>É importante notar que mesmo uma tela completa ou parte de uma tela do sistema que não seja possível ou necessário reaproveitar também será um componente.</p>
+
+  <h2>Serviços</h2>
+
+  <p>Os serviços são criados para concentrar todas as regras de negócio da aplicação. Cada serviço pode ser usado por mais de um componente.</p>
+
+  <p>Eles não são restritos a isso, mas o que normalmente acontece é que usamos serviços para encapsular o código responsável por regras com um propósito específico, como por exemplo para recuperar ou submeter dados em uma API.</p>
+
+  <p>Com isso, podemos deixar os componentes focados em gerenciar partes da tela que o usuário visualiza e os serviços focados em código com um outro propósito específico.</p>
+</body>
+
+</html>

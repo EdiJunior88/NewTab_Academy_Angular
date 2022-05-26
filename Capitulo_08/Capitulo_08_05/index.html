@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Execução do aplicativo</title>
+</head>
+
+<body>
+  <h1>Execução do aplicativo</h1>
+
+
+
+  <p>Abra o prompt de comando node.js ou seu terminal e acesse seu projeto usando o comando cd e, em seguida, execute o comando ng serve para compilar e executar seu aplicativo.</p>
+
+  <p>Abra o navegador e acesse o host local em: http://localhost:4200/</p>
+
+  <p>Agora, aprenderemos como o aplicativo do Angular é carregado e iniciado.</p>
+
+  <p>Vamos remover todo o código do app.compoment.html arquivo e escreva algum código HTML básico. Por exemplo:</p>
+
+  <p>&lth3&gtEsta é a primeira aplicação Angular e eu estou no componente de aplicativo&lt/h3&gt</p>
+
+  <p>Este é o código original no arquivo app.compoment.html</p>
+
+  <p>Então, ele é substituído e fica assim:</p>
+
+  <p>Você também pode vê-lo no navegador:</p>
+
+  <p>Angular é uma estrutura que nos permite criar "Aplicativos de página única", e aqui o index.html é a página única que foi fornecida pelo servidor.</p>
+
+  <p>O código acima se parece com um código HTML normal e aqui a tag &lttitle&gt mostra o mesmo título no navegador que o título do aplicativo. Mas o código</p>
+
+  <p>&ltbody&gt é diferente do código HTML normal. Aqui, você vê a tag "&ltapp-root&gt", fornecida pela CLI. Podemos dizer que, sempre que criamos um projeto a partir da CLI, por padrão, um componente é criado, ou seja, "componente do aplicativo".</p>
+
+  <p>Agora, consulte o arquivo "app.component.ts". É um arquivo TypeScript. Aqui, você vê a propriedade "selector".</p>
+
+  <p>Você pode ver que a propriedade seletor contém a sequência como arquivo index.html. Essas informações são necessárias para que o Angular coloque essa parte em um arquivo index.html com o modelo do componente.</p>
+
+  <p>O modelo do componente é "./app.component.html", portanto, o Angular inclui essa parte no corpo do arquivo index.html.</p>
+
+  <p>Agora, você vê como uma "raiz do aplicativo" está incluída no arquivo index.html.</p>
+
+  <p>Beleza, vamos ver como o Angular é acionado?</p>
+
+  <p>Sempre que o ng-serve cria o aplicativo, ele cria "pacotes" e os adiciona automaticamente ao arquivo index.html em tempo de execução. Portanto, a partir desses pacotes configuráveis, o primeiro código deve ser executado a partir do arquivo "main.ts", ou seja, o arquivo "main.ts" é o arquivo principal de onde a execução de um aplicativo Angular é iniciada.</p>
+
+  <p>Aqui, o método de autoinicialização inicia o aplicativo Angular. Refere-se ao AppModule, que analisa as pastas do aplicativo. Você pode ver no arquivo "app.module" que uma matriz de autoinicialização que é basicamente uma lista de todos os componentes analisa o arquivo index.html.</p>
+
+  <p>Agora, você pode ver que o aplicativo Angular é carregado como:</p>
+
+  <p>main.ts >> app.Module.ts >> app.component.ts >> index.html >> app.component.html</p>
+
+</body>
+
+</html>

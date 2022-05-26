@@ -1,8 +1,6 @@
 <h1>NewTab Academy</h1>
 <h2>Angular</h2>
 
-<h3>Projetos anteriores</h3>
-
 <p>Esse módulo nos fornece uma visão do framework Angular através de conceitos e fundamentos que irão nos ajudar no desenvolvimento de aplicações front-end.</p>
 
 <p>O Angular foi lançado tendo como foco fornecer infraestrutura para a criação de aplicações cliente de grande porte, capazes de serem executadas em múltiplos dispositivos. </p>
@@ -96,5 +94,5 @@
 
 <hr>
 
-<h4><b>Aulas:</b> :vhs: 21 Capítulos</h4>
+<h4><b>Aulas:</b> 📚📼 21 Capítulos + video-aulas</h4>
 <h4><b>Status do Curso:</b> :speech_balloon: Estudando</h4>

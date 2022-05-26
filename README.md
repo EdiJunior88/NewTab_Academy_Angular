@@ -11,14 +11,14 @@
 
 <p>Abaixo temos alguns bons motivos para estudar e aprofundar seus conhecimentos com o Angular:</p>
 
-<ul style="list-style-type: square; color: #253191">
-  <li>O aplicativo web, web app, funcionará na maioria dos navegadores modernos (Chrome, Safari, FireFox, Internet Explorer, Edge, Opera etc.).</li>
-  <li>Há aproveitamento de código em módulos e aplicações. Grande parte do código será aproveitado para geração de aplicações mobile híbridas (app Android, app IOS) geradas pelo IONIC (framework baseado em Angular que empacota uma web app angular em aplicativo mobile).</li>
-  <li>Adotado e mantido pelo Google, ele utiliza como base para desenvolvimento interno de seus projetos, exemplo Gmail.</li>
-  <li>Framework focado na lógica da aplicação oferecendo alta produtividade de entregas.</li>
-  <li>Aplicações ricas e interativas, há suporte a animações em html puro que dispensam a utilização de plugins como flash, silverlight ou Java.</li>
-  <li>Adoção do TypeScript, super conjunto do JavaScript, que permite escrever código utilizando uma estrutura fortemente tipada e ter este código compilado para JavaScript puro.</li>
-</ul>
+```diff
+  + O aplicativo web, web app, funcionará na maioria dos navegadores modernos (Chrome, Safari, FireFox, Internet Explorer, Edge, Opera etc.).
+  + Há aproveitamento de código em módulos e aplicações. Grande parte do código será aproveitado para geração de aplicações mobile híbridas (app Android, app IOS) geradas pelo IONIC (framework baseado em Angular que empacota uma web app angular em aplicativo mobile).
+  + Adotado e mantido pelo Google, ele utiliza como base para desenvolvimento interno de seus projetos, exemplo Gmail.
+  Framework focado na lógica da aplicação oferecendo alta produtividade de entregas.
+  + Aplicações ricas e interativas, há suporte a animações em html puro que dispensam a utilização de plugins como flash, silverlight ou Java.
+  + Adoção do TypeScript, super conjunto do JavaScript, que permite escrever código utilizando uma estrutura fortemente tipada e ter este código compilado para JavaScript puro.
+```
 
 <p>Este módulo apresenta uma introdução aos fundamentos do Angular, seu uso e seus conceitos mais importantes. Ao final, você deverá saber:</p>
 

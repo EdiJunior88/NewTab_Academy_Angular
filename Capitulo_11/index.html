@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Módulos</title>
+</head>
+
+<body>
+  <h1>Módulos</h1>
+
+  <p>O módulo refere-se a um local onde você pode agrupar os componentes, diretivas, pipes e serviços relacionados ao aplicativo. Caso você esteja desenvolvendo um site, o cabeçalho, rodapé, se tornam parte de um módulo.</p>
+
+  <p>Para definir o módulo, podemos usar o NgModule. Quando você cria um novo projeto usando o comando Angular –cli, o NgModule é criado no arquivo app.module.ts por padrão e tem a seguinte aparência:</p>
+
+  <p>O NgModule precisa ser importado da seguinte maneira:</p>
+
+  <pre>
+    import { NgModule } from '@angular/core';
+  </pre>
+
+  <p>A estrutura para o NgModule é mostrada abaixo:</p>
+
+  <p>Começa com @NgModule e contém um objeto que possui declarations, imports, providers e bootstrap.</p>
+
+  <pre>
+    Declarations
+  </pre>
+
+  <p>É uma matriz de componentes criados. Se qualquer novo componente for criado, ele será importado primeiro e a referência será incluída nas declarações, como mostrado abaixo:</p>
+
+  <pre>
+    declarations: [
+      AppComponent,
+      NewCmpComponent
+    ]
+
+    Imports
+  </pre>
+
+  <p>É uma matriz de módulos que devem ser utilizados no aplicativo. Por exemplo, agora no @NgModule, vemos o Módulo do navegador importado (BrowserModule).</p>
+
+  <pre>
+    Providers
+  </pre>
+
+  <p>Isso incluirá os serviços criados.</p>
+
+  <pre>
+    Bootstrap
+  </pre>
+
+  <p>Isso inclui o principal componente do aplicativo para iniciar a execução.</p>
+
+</body>
+
+</html>

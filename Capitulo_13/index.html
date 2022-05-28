@@ -6,38 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>Diretivas</title>
+  <title>*ngIf</title>
 </head>
 
 <body>
-  <h1>Diretivas</h1>
+  <h1>*ngIf</h1>
 
-  <p>As diretivas são usadas para manipular o DOM. Usando diretivas, você pode alterar a aparência, o comportamento ou o layout de um elemento. Também ajuda a estender o HTML.</p>
+  <p>NgIf é uma diretiva Angular que permite alterar a página a partir de uma declaração condicional.</p>
 
-  <p>As diretivas podem ser classificadas em 3 categorias, com base em como elas se comportam:</p>
-
-  <ul>
-    <li>Diretivas de componentes.</li>
-    <li>Diretivas estruturais.</li>
-    <li>Diretivas de atributos.</li>
-  </ul>
-
-  <p>Diretivas de componentes: são usadas na classe principal. Eles contêm os detalhes de como o componente deve ser processado, instanciado e usado em tempo de execução.</p>
-
-  <p>Diretivas estruturais: começam com um sinal *. Essas diretivas são usadas para manipular e alterar a estrutura dos elementos DOM. Por exemplo, diretiva <strong>*ngIf</strong>, <strong>*ngSwitch</strong> e <strong>*ngFor</strong>.</p>
-
-  <ul>
-    <li><strong>*ngIf</strong>: O ngIf nos permite adicionar / remover elemento DOM.</li>
-    <li>*<strong>ngSwitch</strong>: Nos permite adicionar / remover elementos.</li>
-    <li><strong>*ngFor</strong>: é usada para repetir uma parte do modelo HTML uma vez por cada item de uma lista iterável (Coleção).</li>
-  </ul>
-
-  <p>Diretivas de atributo: são usadas para alterar a aparência e o comportamento dos elementos. Por exemplo: ngClass e ngStyle etc.</p>
-
-  <ul>
-    <li><strong>ngClass</strong>: é usada para adicionar ou remover classes CSS a um elemento HTML.</li>
-    <li><strong>ngStyle</strong>: facilita a modificação do estilo de um elemento HTML usando a expressão Você também pode usar a diretiva ngStyle para alterar dinamicamente o estilo do seu elemento HTML.</li>
-  </ul>
+  <p>E o que isso deveria significar?</p>
+  
+  <p>Colocar o ngIf em um elemento, ou componente, cria ou remove esse elemento com base na condição que você fornecer.</p>
+  
+  <p>Alias o ngIf tem o mesmo comportamento que a condicional If nas linguagens de programação…</p>
+  
+  <p>Então ele converte o valor fornecido para um equivalente a true ou false… depois decide se renderiza, ou não, o elemento.</p>
 
 </body>
 

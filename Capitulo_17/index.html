@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Ligação de dados (databinding)</title>
+</head>
+
+<body>
+  <h1>Ligação de dados (databinding)</h1>
+
+  <p>A ligação de dados é o conceito principal do Angular e é usado para definir a comunicação entre um componente e o DOM. É uma técnica para vincular seus dados à sua camada de visualização. Em palavras simples, você pode dizer que a ligação de dados é uma comunicação entre o código de texto do seu componente e o modelo que o usuário vê. Facilita a definição de aplicativos interativos sem se preocupar em enviar e receber dados.</p>
+
+  <p>A ligação de dados pode ser unidirecional ou bidirecional.</p>
+
+  <h2>Ligação de dados unidirecional</h2>
+
+  <p>A ligação de dados unidirecional é uma comunicação unidirecional simples, na qual o modelo HTML é alterado quando fazemos alterações no código TypeScript. Angular fornece três tipos de ligação de dados unidirecional:</p>
+
+  <ul>
+    <li>Interpolação de String</li>
+    <li>Vinculação de Propriedade</li>
+    <li>Ligação de evento</li>
+  </ul>
+
+  <h2>Interpolação de string</h2>
+
+  <p>A interpolação de sequência de caracteres é uma técnica de ligação de dados unidirecional que é usada para gerar dados de um código TypeScript para um modelo HTML (exibição). Ele usa a expressão do modelo entre chaves duplas para exibir os dados do componente para a visualização.</p>
+
+  <p>Por exemplo:</p>
+
+  <pre>
+    {{data}}
+  </pre>
+
+  <p>A interpolação de string adiciona o valor de uma propriedade do componente.</p>
+
+  <p>Sintaxe:</p>
+
+  <pre>
+    &ltli>Name: {{ user.name }}&lt/li&gt
+    &ltli&gtEmail: {{ user.email }}&lt/li&gt
+  </pre>
+
+  <h2>Vinculação de Propriedade</h2>
+
+  <p>A vinculação de propriedades também é uma técnica de ligação de dados unidirecional. Na ligação de propriedades, vinculamos uma propriedade de um elemento DOM a um campo que é uma propriedade definida em nosso código TypeScript do componente.</p>
+
+  <p>Por exemplo:</p>
+
+  <pre>
+    &ltimg [src] = "imgUrl" /&gt
+  </pre>
+
+  <p>Sintaxe:</p>
+
+  <pre>
+    &ltinput type="email" [value]="user.email"&gt
+  </pre>
+
+  <h2>Ligação de evento</h2>
+
+  <p>No Angular é usada para manipular os eventos gerados no DOM, como clique no botão, movimento do mouse etc. Quando o evento DOM acontece (por exemplo, clique, alterar, keyup), ele chama o método especificado no componente. No exemplo a seguir, o método calcular() do componente é chamado quando o botão é clicado:</p>
+
+  <p>Por exemplo:</p>
+
+  <pre>
+    &ltbutton (click)="calcular()"&gt&lt/button&gt
+  </pre>
+
+  <h2>Ligação de dados bidirecional</h2>
+
+  <p>Na ligação de dados bidirecional, a sincronização automática de dados ocorre entre o Modelo e a Visualização. Aqui, a mudança é refletida nos dois componentes. Sempre que você fizer alterações no modelo, ele será refletido na visualização e quando você fizer alterações no modo de exibição, será refletido no modelo.</p>
+
+  <p>Isso acontece imediata e automaticamente, garante que o modelo HTML e o código TypeScript sejam atualizados o tempo todo.</p>
+  
+  <p>Por exemplo:</p>
+
+  <pre>
+    [(ngModel)] = "[property of your component]"
+  </pre>
+
+  <p>Observe o exemplo abaixo, repare que foi criado um campo input com um ngModel, com isso ao trocarmos o valor desse campo imediatamente o valor é atualizado no TypeScript e logo em seguida mostrado novamente para nós:</p>
+
+</body>
+
+</html>

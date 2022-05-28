@@ -1,0 +1,7 @@
+<p>usuarios works!</p>
+
+<ul *ngFor="let usuario of usuarios">
+  <li *ngIf="usuario.id > 2">
+    {{usuario.nome}} -- {{usuario.idade}}
+  </li>
+</ul>

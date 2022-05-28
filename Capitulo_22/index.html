@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Pipes</title>
+</head>
+
+<body>
+  <h1>Pipes</h1>
+
+  <p>Os pipes foram anteriormente chamados de filtros no Angular 1 e chamados de pipes do Angular 2 em diante. O | caractere é usado para transformar dados. A seguir está a sintaxe para ele:</p>
+
+  <pre>
+    {{ Welcome to Angular | lowercase}}
+  </pre>
+
+  <p>Vamos considerar alguns exemplos usando pipes. Aqui, queremos exibir o texto fornecido em maiúsculas e outro em minúsculo. Isso pode ser feito usando pipes da seguinte maneira:</p>
+
+  <p>No arquivo app.component.ts, definimos a variável title da seguinte maneira:</p>
+
+  <p>A seguinte linha de código entra no arquivo app.component.html:</p>
+
+  <p>Sendo assim no browser teríamos a seguinte saída:</p>
+
+  <p>Estes são alguns pipes disponíveis no Angular:</p>
+
+  <ul>
+    <li>Lowercasepipe</li>
+    <li>Uppercasepipe</li>
+    <li>Datepipe</li>
+    <li>Currencypipe</li>
+    <li>Jsonpipe</li>
+    <li>Percentpipe</li>
+    <li>Decimalpipe</li>
+    <li>Slicepipe</li>
+  </ul>
+
+  <p>Então vamos ver como os outros pipes funcionam. A seguinte linha de código nos ajudará a definir as variáveis ​​necessárias no arquivo app.component.ts:</p>
+
+  <p>Usaremos os pipes no arquivo app.component.html, como mostrado abaixo:</p>
+
+  <p>Aqui abaixo conseguimos entender como todos esses pipes funcionam:</p>
+
+  <h2>Como criar um pipe personalizado</h2>
+
+  <p>Para criar um pipe personalizado, criamos um novo arquivo ts. Aqui, queremos criar o pipe personalizado sqrt. Atribuímos o mesmo nome ao arquivo e é o seguinte:</p>
+
+  <p>Para criar um pipe personalizado, precisamos importar Pipe e Pipe Transform do Angular / core. Na diretiva @Pipe, precisamos dar o nome ao nosso pipe, que será usado no nosso arquivo .html. Como estamos criando o canal sqrt, iremos chamá-lo de sqrt.</p>
+
+  <p>O método de transformação definido na classe terá o argumento como o número e retornará o número depois de obter a raiz quadrada.</p>
+
+  <p>Desde que criamos um novo arquivo, precisamos adicionar o mesmo em app.module.ts. Isso é feito da seguinte maneira:</p>
+
+  <p>Criamos a classe app.sqrt.ts. Temos que importar o mesmo em app.module.ts e especificar o caminho do arquivo. Também deve ser incluído nas declarações, como mostrado acima.</p>
+
+  <p>Vamos agora ver a chamada feita para o canal sqrt no arquivo app.component.html:</p>
+
+  <p>Assim teremos a seguinte saída:</p>
+
+</body>
+
+</html>

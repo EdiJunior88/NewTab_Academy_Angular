@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Como usar *ngIf *ngFor *ngSwitch</title>
+</head>
+
+<body>
+  <h1>Como usar *ngIf *ngFor *ngSwitch</h1>
+
+  <h2>NgIf</h2>
+
+  <p>São usadas para adicionar ou remover elementos HTML de acordo com a expressão. A expressão deve retornar um valor booleano. Se a expressão for falsa, o elemento será removido, caso contrário, o elemento será inserido.</p>
+
+  <pre>
+    &ltp *ngIf="condition"&gt
+      Olá mundo!
+    &lt/p&gt
+  </pre>
+
+  <h2>NgFor</h2>
+
+  <p>A diretiva *ngFor é usada para repetir uma parte do modelo HTML uma vez por cada item de uma lista iterável (Coleção). Algumas variáveis locais como Index, First, Last, odd e even são exportadas pelo *ngFor.</p>
+
+  <p>Veja a sintaxe simplificada para a diretiva ngFor:</p>
+
+  <pre>
+    &ltli *ngFor="let item of items;"&gt …. &lt/li&gt
+  </pre>
+
+  <h2>NgSwitch</h2>
+
+  <p>NgSwitch é uma diretiva estrutural usada para adicionar / remover elemento DOM. A diretiva ngSwitch é aplicada ao elemento container com uma expressão switch.</p>
+
+  <pre>
+    &ltcontainer_element [ngSwitch]="switch_expression"&gt
+      &ltinner_element *ngSwitchCase="match_expresson_1"&gt…&lt/inner_element&gt
+      &ltinner_element *ngSwitchCase="match_expresson_2"&gt…&lt/inner_element&gt
+      &ltinner_element *ngSwitchCase="match_expresson_3"&gt…&lt/inner_element&gt
+      &ltinner_element *ngSwitchDefault&gt…&lt/element&gt
+    &lt/container_element&gt
+  </pre>
+
+  <h2>NgSwitchDefault</h2>
+
+  <p>Você também pode aplicar a diretiva ngSwitchDefault no Angular 8. O elemento com ngSwitchDefault será exibido apenas se nenhuma correspondência for encontrada. O elemento interno com ngSwitchDefault pode ser colocado em qualquer lugar dentro do elemento container e não necessariamente na parte inferior. Se você adicionar mais de uma diretiva ngSwitchDefault, todos eles serão exibidos.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>*ngSwitch</title>
+</head>
+
+<body>
+  <h1>*ngSwitch</h1>
+
+  <p>A diretiva ngSwitch é uma diretiva que exibe um elemento de um possível conjunto de elementos com base em alguma condição. Ela usa as diretivas <strong>ngSwitchCase</strong> e <strong>ngSwitchDefault</strong>.</p>
+
+  <ol>
+    <li><strong>ngSwitchCase</strong> é usada para definir um conjunto de árvores de elementos possíveis</li>
+    
+    <li><strong>ngSwitchDefault</strong> é usada para definir o valor padrão quando a condição de expressão não corresponde a nenhuma árvore de elementos definida por <strong>ngSwitchCase</strong>.</li>
+  </ol>
+
+  <p>A diretiva NgSwitch é usada como propriedade de ligação, como <code>[ngSwitch]</code> com colchete []. Para definir um possível conjunto de elementos, precisamos adicionar o asterisco (*) como prefixo às palavras-chave do switch como <code>*ngSwitchCase</code> e <code>*ngSwitchDefault</code>.</p>
+
+  <p>Sempre que NgSwitch encontrar uma correspondência avaliada pela expressão, o respectivo elemento definido por ngSwitchCase será adicionado ao DOM e, se nenhuma correspondência for encontrada, o elemento definido por ngSwitchDefault será adicionado ao DOM.</p>
+
+</body>
+
+</html>

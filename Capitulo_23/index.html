@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Roteamento</title>
+</head>
+
+<body>
+  <h1>Roteamento</h1>
+
+  <h2>Angular: Rotas, Guardas e Navegação</h2>
+
+  <p>O Angular nos fornece um esquema de rotas e navegação completo, simples e fácil de utilizar, incluindo um esquema de guardas de rotas para implementar segurança em nossos Apps.</p>
+
+  <p>Se você não sabe como eles funcionam, ou quer aprender mais sobre o assunto, vem comigo que vou te mostrar neste artigo.</p>
+  
+  <h2>Criando o módulo de rotas</h2>
+
+  <p>No Angular, muita coisa é modularizada, e as rotas não são diferentes. Ao criar uma aplicação Angular, somos indagados sobre o uso das mesmas (Would you like to add Angular Routing?), e ao responder “Yes”, já temos tudo que precisamos para o roteamento.</p>
+
+  <p>Na verdade, tudo que precisamos para ter rotas em nossa aplicação é um arquivo de módulo das rotas e importá-lo posteriormente no Root Module.</p>
+
+  <p>Este arquivo de rotas, normalmente chamado app-routing.module.ts, tem a seguinte estrutura.</p>
+
+  <pre>
+    import { NgModule } from '@angular/core';
+    import { Routes, RouterModule } from '@angular/router';
+
+    const routes: Routes = [];
+
+    @NgModule({
+      imports: [RouterModule.forRoot(routes)],
+      exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+  </pre>
+
+  <p>O que importa para nós neste momento é a constante “routes”, que será o local onde colocaremos nossa estrutura de rotas.</p>
+
+  <p>Em adicional, vamos criar algumas páginas (Components) para poder exemplificar melhor, rodando os comandos abaixo.</p>
+
+  <pre>
+    ng generate componente pages/login
+    ng generate componente pages/signup
+    ng generate componente pages/master
+    ng generate componente pages/home
+    ng generate componente pages/reports
+  </pre>
+
+  <h2>Compondo as rotas</h2>
+
+  <p>As rotas são definidas por dois elementos principais, o Path, que é o caminho (URL) e o Componente, que é o componente a ser carregado. Ainda existem outras formas de carregar páginas mais eficientes, como carregamento assíncrono, via módulos, mas este é assunto para um próximo artigo.</p>
+
+  <p>Este é o resultado da forma mais simples de rotas que podemos ter no Angular.</p>
+
+  <pre>
+    import { NgModule } from '@angular/core';
+    import { Routes, RouterModule } from '@angular/router';
+    import { LoginComponent } from './pages/login/login.component';
+    import { SignupComponent } from './pages/signup/signup.component';
+    import { MasterComponent } from './pages/master/master.component';
+    import { HomeComponent } from './pages/home/home.component';
+    import { ReportsComponent } from './pages/reports/reports.component';
+
+    const routes: Routes = [
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
+      { path: 'master', component: MasterComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'reports', component: ReportsComponent },
+    ];
+
+    @NgModule({
+      imports: [RouterModule.forRoot(routes)],
+      exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+  </pre>
+
+  <p>Ao abrir o browser, podemos navegar para <a href="http://localhost:4200/home">http://localhost:4200/home</a> por exemplo, porém, continuaremos a ver a página padrão do Angular na tela.</p>
+
+  <h2>Exibindo as páginas</h2>
+
+  <p>Quando configuramos uma rota e navegamos até ela, o Angular recupera a URL, checa no arquivo de rotas e tenta carregar o componente na tela.</p>
+
+  <p>Neste caso, o que acontece é que o Angular recuperou a URL <a href="http://localhost:4200/home">http://localhost:4200/home</a>, encontrou uma rota com este nome, localizou o componente que devia renderizar na tela, mas não conseguiu encontrar ONDE, na tela, ele deveria renderizar este componente.</p>
+
+  <p>Para que isto aconteça, precisamos de uma tag especial, chamada de Router Outlet, pois sempre que um fluxo como o descrito acima é chamado, o Angular busca esta tag para poder renderizar o componente desejado.</p>
+
+  <p>Vamos então para página app.component.html, remover todo conteúdo dela e deixar apenas as tags .</p>
+
+  <p>Desta forma, ao navegar para URL <a href="http://localhost:4200/home">http://localhost:4200/home</a>, conseguimos ver o texto “home Works!”, padrão dos componentes do Angular.</p>
+
+  <p>É importante notar que qualquer HTML contido na página app.component.html será exibido em todas as páginas do nosso App, então, particularmente prefiro deixar apenas o Router Outlet nele.</p>
+
+  <h2>Navegando via HTML</h2>
+
+  <p>Um erro comum na navegação do Angular é utilizar o href padrão do HTML para link de páginas. O uso desta propriedade, fará com que nossa aplicação seja recarregada a cada navegação.</p>
+
+  <p>Ao invés disso, utilizamos o routerLink do Angular, que fará com que apenas os componentes necessários sejam renderizados na tela.</p>
+
+  <p>Desta forma, vamos incluir o seguinte código à todas as páginas HTML (home, master, login, signup, reports) que temos.</p>
+
+  <pre>
+    &lthr&gt
+    &lta routerLink="/login"&gtLogin&lt/a&gt&ltbr&gt
+    &lta routerLink="/signup"&gtSignup&lt/a&gt&ltbr&gt
+    &lta routerLink="/master"&gtMaster&lt/a&gt&ltbr&gt
+    &lta routerLink="/home"&gtHome&lt/a&gt&ltbr&gt
+    &lta routerLink="/reports"&gtReports&lt/a&gt&ltbr&gt
+  </pre>
+
+  <p>Neste momento, já podemos executar a aplicação, utilizando “ng serve” e navegar entre as páginas que criamos posteriormente.</p>
+
+</body>
+
+</html>

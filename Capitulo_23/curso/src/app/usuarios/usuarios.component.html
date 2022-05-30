@@ -1,0 +1,19 @@
+<p>{{ user_selected | uppercase }}</p>
+
+<p>{{ hoje | date:"dd/MM/yyyy" }}</p>
+
+<p>{{ 25 | sqrt }}</p>
+
+<input type="text" [(ngModel)]="user_selected">
+<button (click)="alterarNome()">Click Aqui</button>
+
+<!-- <ul *ngFor="let usuario of usuarios">
+  <li *ngIf="usuario.id > 2">
+    {{usuario.nome}} -- {{usuario.idade}}
+  </li>
+</ul> -->
+
+<!-- <ul [ngSwitch]='user_selected'>
+  <li *ngSwitchCase="'Bruno'">Bruno</li>
+  <li *ngSwitchCase="'Fernando'">Fernando</li>
+</ul> -->

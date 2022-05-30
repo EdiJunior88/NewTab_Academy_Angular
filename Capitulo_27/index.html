@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Formulários</title>
+</head>
+
+<body>
+  <h1>Formulários</h1>
+
+  <p>Criaremos um formulário de login simples e adicionaremos o email, a senha e o botão enviar no formulário. Para começar, precisamos importar o <code>ReactiveFormsModule</code> de <code>@ angular / forms</code> e usar o mesmo na matriz de importações:</p>
+
+  <p>No <code>app.component.ts</code> , precisamos importar alguns módulos para o formulário controlado pelo modelo. Por exemplo, importe <code>{FormGroup, FormControl}</code> de <code>'@ angular / forms'</code>.</p>
+
+  <p>Os dados do formulário variável são inicializados no início da classe e o mesmo é inicializado com o FormGroup, como mostrado acima. As variáveis emailid e passwd são inicializadas com valores padrão a serem exibidos no formulário. Você pode mantê-lo em branco, se desejar.</p>
+
+  <p>É assim que os valores serão vistos no formulário da interface do usuário.</p>
+
+  <p>Nós usamos <code>formdata</code> para inicializar os valores do formulário; precisamos usar o mesmo no formato <code>app.component.html</code>.</p>
+
+  <p>No arquivo .html, usamos formGroup entre colchetes para o formulário; por exemplo, <code>[formGroup] = "formdata"</code>. No envio, a função é chamada <code>onClickSubmit</code> para a qual <code>formdata.value</code> é passado.</p>
+
+  <p>A marca de entrada <code>formControlName</code> é usada. É dado um valor que usamos no arquivo <code>app.component.ts</code>.</p>
+
+  <p>Ao clicar em enviar, o controle passará para a função <code>onClickSubmit</code>, definida no arquivo <code>app.component.ts</code>.</p>
+
+  <h2>Validação de formulário</h2>
+
+  <p>Vamos agora discutir a validação de formulário para isso precisamos importar validadores de<code> @ angular / forms</code> como mostrado abaixo:</p>
+
+  <p><code>import { FormGroup, FormControl, Validators} from '@angular/forms'</code></p>
+
+  <p>Angular possui validadores internos, como campo obrigatório, comprimento mínimo, comprimento máximo e padrão. Estes devem ser acessado usando o módulo <code>Validators</code>.</p>
+
+  <p>Você pode apenas adicionar validadores ou uma matriz de validadores necessários para informar ao Angular se um determinado campo é obrigatório. Vamos agora tentar o mesmo em uma das caixas de texto de entrada, ou seja, identificação de email. Para o ID do email, adicionamos os seguintes parâmetros de validação:</p>
+
+  <ul>
+    <li>Requeridos</li>
+    <li>Correspondência de padrões</li>
+  </ul>
+
+  <p>É assim que um código é validado em <code>app.component.ts</code>:</p>
+
+  <p>No Validators.compose, você pode adicionar a lista de itens que deseja validar no campo de entrada. No momento, adicionamos os parâmetros obrigatórios e de correspondência de padrões para receber apenas emails válidos.</p>
+
+  <p>No <code>app.component.html</code>, o botão enviar será desativado se alguma das entradas do formulário não for válida. Isso é feito da seguinte maneira:</p>
+
+  <p>Para o botão enviar, adicionamos desativado no colchete, que recebe o seguinte valor <code>"formdata.valid"</code>.</p>
+
+  <p>Portanto, se o <code>formdata.valid</code> não for válido, o botão permanecerá desativado e o usuário não poderá enviá-lo.</p>
+
+  <p>Vamos ver como isso funciona no navegador:</p>
+
+  <p>Vamos agora tentar a validação personalizada com o mesmo formulário. Para validação personalizada, podemos definir nossa própria função personalizada e adicionar os detalhes necessários. Agora veremos o exemplo abaixo para o mesmo.</p>
+
+  <p>No exemplo acima, criamos uma função validação de senha e o mesmo é usado em uma seção anterior no <code>formuláriocontrol – passwd: new FormControl ("", this.passwordvalidation)</code>.</p>
+
+  <p>Na função que criamos, verificaremos se o comprimento dos caracteres digitados é apropriado. Se os caracteres forem menores que cinco, ele retornará com a senha true, como mostrado acima – retorne <code>{"passwd": true};</code> . Se os caracteres tiverem mais de cinco anos, será considerado válido e o login será ativado.</p>
+
+  <p>Vamos agora ver como isso é exibido no navegador:</p>
+
+</body>
+
+</html>

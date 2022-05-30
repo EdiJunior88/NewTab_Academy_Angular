@@ -1,0 +1,27 @@
+<h1>Angular - {{hoje | date: 'long' : '' : 'pt-BR'}}</h1>
+
+<nav>
+  <div>
+    <a routerLink="/home">Home</a>
+    <br>
+    <a routerLink="/fale-comigo">Contato</a>
+  </div>
+</nav>
+
+<div>
+  <form [formGroup]='formdata' (ngSubmit)='onClickSubmit(formdata.value)'>
+    <input type="text" class="fortextbox" name="emailid" placeholder="emailid" formControlName="emailid">
+
+    <br>
+
+    <input type="password" class="fortextbox" name="passwd" placeholder="passwd" formControlName="passwd">
+
+    <br>
+
+    <input type="submit" class="forsubmit" value="Log In">
+  </form>
+</div>
+
+<p>Email entered is: {{emailid}}</p>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Serviços (Reforçando conteúdo)</title>
+</head>
+
+<body>
+  <h1>Serviços (Reforçando conteúdo)</h1>
+
+  <p>Podemos encontrar uma situação em que precisamos de algum código para ser usado em qualquer lugar da página. Por exemplo, pode ser para conexão de dados que precisa ser compartilhada entre componentes. Isso é alcançado com a ajuda dos Serviços. Com os serviços, podemos acessar métodos e propriedades em outros componentes em todo o projeto.</p>
+
+  <p>Para criar um serviço, precisamos fazer uso da linha de comando conforme indicado abaixo:</p>
+
+  <p>Os arquivos criados na pasta do aplicativo são os seguintes:</p>
+
+  <p>Antes de criar um novo serviço, precisamos incluir o serviço criado no app.module.ts:</p>
+
+  <p>Nós importamos o Serviço com o nome da classe e a mesma classe é usada nos providers. Vamos agora voltar para a classe de serviço e criar uma função de serviço. Na classe de serviço, criaremos uma função que exibirá a data de hoje.</p>
+
+  <p>No arquivo de serviço acima, criamos uma função showTodayDate . Agora retornaremos a nova data criada. Vamos ver como podemos acessar essa função na classe component.</p>
+
+  <p>A função ngOnInit é chamada por padrão em qualquer componente criado. A data é buscada no serviço, como mostrado acima. Para buscar mais detalhes do serviço, precisamos primeiro incluir o serviço no arquivo ts do componente.</p>
+
+  <p>Vamos agora ver como usar o serviço no novo componente criado.</p>
+
+  <p>No novo componente que criamos, precisamos primeiro importar o serviço que queremos e acessar os métodos e propriedades do mesmo. Verifique o código destacado. todaydate é exibido no componente html da seguinte maneira:</p>
+
+  <p>O seletor do novo componente é usado no arquivo app.component.html. O conteúdo do arquivo html acima será exibido no navegador, como mostrado abaixo:</p>
+
+  <p>Se você alterar a propriedade do serviço em qualquer componente, o mesmo também será alterado em outros componentes.</p>
+
+</body>
+
+</html>

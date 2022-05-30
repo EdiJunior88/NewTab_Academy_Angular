@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Roteamento (Reforçando o Conteúdo)</title>
+</head>
+
+<body>
+  <h1>Roteamento (Reforçando o Conteúdo)</h1>
+
+  <p>Rotear significa basicamente navegar entre as páginas. Você já viu muitos sites com links que direcionam para uma nova página. Isso pode ser alcançado usando o roteamento. Aqui as páginas às quais estamos nos referindo estarão na forma de componentes. Já vimos como criar um componente. Vamos agora criar um componente e ver como usar o roteamento com ele.</p>
+
+  <p>Durante a configuração do projeto, já incluímos o módulo de roteamento e o mesmo está disponível em app.module.ts, como mostrado abaixo:</p>
+
+  <p>AppRoutingModule é adicionado como mostrado acima e incluído na matriz de importações. Os detalhes do arquivo app-routing.module são fornecidos abaixo:</p>
+
+  <p>Aqui, devemos observar que esse arquivo é gerado por padrão quando o roteamento é adicionado durante a configuração do projeto. Se não forem adicionados, os arquivos acima deverão ser adicionados manualmente.</p>
+
+  <p>Portanto, no arquivo acima, importamos Routes e RouterModule de @ angular / router.</p>
+
+  <p>Há uma rota const definida, que é do tipo Rotas. É uma matriz que contém todas as rotas necessárias em nosso projeto.</p>
+
+  <p>As rotas const são fornecidas ao RouterModule como mostrado em @NgModule. Para exibir os detalhes de roteamento para o usuário, precisamos adicionar a diretiva &ltrouter-outlet&gt onde queremos que a exibição seja exibida.</p>
+
+  <p>O mesmo é adicionado em app.component.html, como mostrado abaixo:</p>
+
+  <p>Agora, vamos criar dois componentes chamados “Home” e “Fale Conosco” e navegar entre eles usando o roteamento.</p>
+
+  <p>Terminamos a criação de componentes para casa e entre em contato conosco. Abaixo estão os detalhes dos componentes em app.module.ts:</p>
+
+  <p>Agora, vamos adicionar os detalhes das rotas em app-routing.module .ts, como mostrado abaixo:</p>
+
+  <p>Crie o botão dentro de app.component.html e forneça o caminho para as rotas criadas:</p>
+
+  <p>Ao clicar no link, você também verá o URL da página na barra de endereços mudando. Anexa os detalhes do caminho no final da página, como visto na captura de tela:</p>
+
+</body>
+
+</html>

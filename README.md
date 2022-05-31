@@ -95,4 +95,4 @@
 <hr>
 
 <h4><b>Aulas:</b> 📚📼 21 Capítulos + video-aulas</h4>
-<h4><b>Status do Curso:</b> :speech_balloon: Estudando</h4>
+<h4><b>Status do Curso:</b> ✅ Completado</h4>

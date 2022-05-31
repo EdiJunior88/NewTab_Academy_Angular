@@ -1,0 +1,16 @@
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+<div><span>nascimento: </span>{{hero.nasc | date:"dd/MM/yyyy"}}</div>
+
+<div>
+  <label for="name">name: </label>
+  <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
+
+<!-- <button (click)="villanPage()">Arquinimigos</button> -->
+<!-- <button (click)="save()">Salvar</button> -->
+
+<ul>
+  <li *ngFor="let h of hero">{{h.name}}</li>
+</ul>
